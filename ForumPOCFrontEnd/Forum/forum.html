@@ -12,15 +12,29 @@
         <input type="text" placeholder="Hinted search text">
         <button class="search-icon">🔍</button>
       </div>
-      <div class="settings">Settings</div>
+      <div class="settings">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
     </div>
     <div class="post-content">
       <p>Section 3</p>
-      </div>
+    </div>
     <div class="footer">
       <button class="like">👍</button>
       <button class="comment">💬</button>
+      <div class="comment-box">
+        <textarea placeholder="Add a comment"></textarea>
+        <button class="submit-comment">Submit</button>
+      </div>
     </div>
+  </div>
+  <div class="popup" id="newPostPopup">
+    <h3>Create New Post</h3>
+    <textarea placeholder="Write your post here..."></textarea>
+    <button id="submitPost">Submit</button>
+    <button id="closePopup">Close</button>
   </div>
   <script src="forum.js"></script>
 </body>

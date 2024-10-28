@@ -1,13 +1,32 @@
-// script.js
 const newPostButton = document.querySelector('.new-post');
-const searchIcon = document.querySelector('.search-icon');
+const commentButton = document.querySelector('.comment');
+const commentBox = document.querySelector('.comment-box');
+const settingsDots = document.querySelectorAll('.settings .dot');
+const newPostPopup = document.getElementById('newPostPopup');
+const closePopupButton = document.getElementById('closePopup');
+const submitPostButton = document.getElementById('submitPost');
 
 newPostButton.addEventListener('click', () => {
-  // Add your logic for creating a new post here
-  alert('New post button clicked!');
+  newPostPopup.classList.toggle('active');
 });
 
-searchIcon.addEventListener('click', () => {
-  // Add your logic for searching posts here
-  alert('Search button clicked!');
+commentButton.addEventListener('click', () => {
+  commentBox.classList.toggle('active');
+});
+
+settingsDots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    // Add your logic for settings here
+    alert('Settings clicked!');
+  });
+});
+
+closePopupButton.addEventListener('click', () => {
+  newPostPopup.classList.remove('active');
+});
+
+submitPostButton.addEventListener('click', () => {
+  // Logic for submitting the new post
+  alert('New post submitted!');
+  newPostPopup.classList.remove('active');
 });
